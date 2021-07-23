@@ -11,6 +11,8 @@ import { cra } from './recipes/react'
 import { vuecli } from './recipes/vue-cli'
 import { vanillajs } from './recipes/vanilla'
 import { vite } from './recipes/vite'
+import { ngcli } from './recipes/ng-cli'
+import { svelte } from './recipes/svelte'
 import { install, checkPackageManager } from './dependency-manager'
 import { shell } from './shell'
 import { addTauriScript } from './helpers/add-tauri-script'
@@ -113,7 +115,7 @@ interface Responses {
   recipeName: string
 }
 
-const allRecipes: Recipe[] = [vanillajs, cra, vite, vuecli]
+const allRecipes: Recipe[] = [vanillajs, cra, vite, vuecli, ngcli, svelte]
 
 const recipeByShortName = (name: string): Recipe | undefined =>
   allRecipes.find((r) => r.shortName === name)
